@@ -12,7 +12,7 @@
 <body>
 
   <header class="hero">
-    <div id="navbar" class="navbar">
+    <div id="navbar" class="navbar top">
       <h1 class="logo">
         <span class="text-primary">
           
@@ -149,14 +149,106 @@
               <h2>Blog post One</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum distinctio, ad et optio consectetur quisquam officiis aliquam incidunt autem velit.</p>
 
-              <a href="#" class="btn btn-outline">Read More</a>
+              <a href="blog.html" class="btn btn-outline">Read our Blog</a>
               <i class="fas fa-chevron"></i>
               
             </div>
           </div>
         </div>
       </section>
+
+      <section id="team" class="team section-padding">
+        <header class="section-header">
+          <h4>Who we are</h4>
+          <h2>Our profesional team</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ipsa!</p>
+        </header>
+
+        <div class="flex-items">
+          <div>
+            <img src="img/team/person1.jpg" alt="">
+            <h4>John Doe</h4>
+            <p>Precident</p>
+          </div>
+          <div>
+            <img src="img/team/person2.jpg" alt="">
+            <h4>Jane Doe</h4>
+            <p>Vice Precident</p>
+          </div>
+          <div>
+            <img src="img/team/person3.jpg" alt="">
+            <h4>Rick Ashley</h4>
+            <p>Marketing Head</p>
+          </div>
+          
+        </div>
+      </section>
+      
+      <section id="contact" class="contact flex-columns">
+        <div class="row">
+          <div class="column">
+            <div class="column-1">
+              <img src="img/home/contact.jpg" alt="employees">
+            </div>
+          </div>
+          <div class="column">
+            <div class="column-2 bg-light">
+              <h2>Request Callback</h2>
+              <form action="" class="callback-form">
+                <div class="form-control">
+                  <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Name">
+                </div>
+              </form>
+              <form action="" class="callback-form">
+                <div class="form-control">
+                  <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="example@email.com">
+                </div>
+              </form>
+              <form action="" class="callback-form">
+                <div class="form-control">
+                  <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="text" placeholder="Phone number">       
+                </div>
+                <input class="btn" type="submit" value="Send">
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i> </a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i> </a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i> </a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i> </a>
+      </div>
+      <p>Copyright &copy; EdgeLedger</p>
+    </footer>
+
+    <script>
+      const navbar = document.getElementById('navbar');
+
+      window.onscroll = function() {
+        let scrolled = false;
+          if (window.pageYOffset > 100) {
+            navbar.classList.remove('top');
+            if(!scrolled) {
+              navbar.style.transform = 'translateY(-70px)'
+            }
+            setTimeout(function () {
+              navbar.style.transform = 'translateY(0px)'
+              scrolled = true;
+            }, 20);
+          } else {
+            navbar.classList.add('top');
+            scrolled = false;
+          }
+      }
+    </script>
   
 </body>
 </html>

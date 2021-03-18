@@ -1,7 +1,12 @@
+:root {
+  --PrimaryColor: #28a745;
+  --secondaryColor: #0284d0;
+}
+
 /* text styles and colors */
 
 .text-primary {
-  color: #28a745;
+  color: var(--PrimaryColor);
 }
 
 .text-secondary {
@@ -15,7 +20,7 @@
   display: inline-block;
   padding: 10px 30px;
   color: #fff;
-  background-color: #28a745;
+  background-color: var(--PrimaryColor);
   border: none;
   border-radius: 5px;
 }
@@ -25,12 +30,12 @@
 }
 
 .btn-primary, .bg-primary {
-  background: #28a745;
+  background: var(--PrimaryColor);
   color: #fff;
 }
 
 .btn-secondary, .bg-secondary {
-  background: #0284d0;
+  background: var(--secondaryColor);
   color: #fff;
 }
 
